@@ -1,5 +1,5 @@
 from django import forms
-from .models import Post
+from .models import Post, Comment
 
 class PostForm(forms.ModelForm):
 
@@ -9,4 +9,10 @@ class PostForm(forms.ModelForm):
 
 		# which field(s) should end up in our form.
 		fields = ('title', 'text',)
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ('author', 'text',)
+    
     

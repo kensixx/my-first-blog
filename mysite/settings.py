@@ -120,3 +120,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# Login Redirect URL (from DjangoGirls tutorial: Extensions)
+
+# so that when the login page is accessed directly, it will redirect a successful login to the top-level index (the homepage of our blog).
+LOGIN_REDIRECT_URL = '/'
