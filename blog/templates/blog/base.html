@@ -23,7 +23,8 @@
                 {# "Post Lists Draft" button will only appear if user is logged in into django/admin. #}
                 <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
 
-                <p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
+                
+                <p id="greeting" class="top-menu">Hello, {{ user.username }}! <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
             
             {# OTHERWISE #}
             {% else %}
