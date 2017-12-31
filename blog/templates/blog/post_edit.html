@@ -1,0 +1,12 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+	<h1>New post</h1>
+	<form method="POST" class="post-form">
+		{% csrf_token %}
+
+		{# display the form as form.as_p, nasa django docs siya. form kasi napass sa dict yung var dun sa views.py #}
+		{{ form.as_p }}
+		<button type="submit" class="save btn btn-default">Save</button>
+	</form>
+{% endblock content %}
